@@ -48,6 +48,33 @@
             $2
         })
     """
+# JavaScript ES6/ES7 Snippets
+  'Let variable creation':
+      'prefix': 'vlet'
+      'body': 'let ${1:_name} = ${2:_value};'
+  'Const variable creation':
+      'prefix': 'vconst'
+      'body': 'const ${1:_name} = ${2:_value};'
+  'Arrow function creation':
+      'prefix': '->'
+      'body': '($1) => $2'
+  'Class Export':
+    'prefix': 'cls'
+    'body': """
+        export class ${1:_className} {
+
+            constructor() {
+            	${2}
+            }
+        }
+    """
+   'Configure Function Export':
+    'prefix': 'cfn'
+    'body': """
+        export function configure($1) {
+            $2
+        }
+    """
 # NodeJS specific snippets
   'Node Middleware Function':
     'prefix': 'mfn'
