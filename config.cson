@@ -1,0 +1,12 @@
+"*":
+  "exception-reporting":
+    userId: "0a152c13-24f0-8b40-5fa9-76ed0227b77a"
+  welcome:
+    showOnStartup: false
+  "vim-mode": {}
+  core: {}
+  editor:
+    invisibles: {}
+    tabLength: 4
+  "atom-beautify":
+    _analyticsUserId: "01702a09-cfc8-4885-950c-75f7e435f076"

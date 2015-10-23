@@ -1,0 +1,11 @@
+~.[oa]
+~.tmp
+~.swp
+temp/
+tmp/
+.atom/
+.apm/
+.node-gyp/
+compile-cache/
+packages/
+storage/
