@@ -488,8 +488,8 @@
     'prefix': 'exd'
     'body': """
         var express = require("express"),
-        mongoose = require("mongoose"),
-        bodyParser = require("body-parser");
+            mongoose = require("mongoose"),
+            bodyParser = require("body-parser");
 
         var config = require("../../config")();
 
@@ -503,4 +503,35 @@
         app.use("/*", express.static(config.index));
 
         app.listen(config.port);
+    """
+# Aurelia Specific Snippets
+  'Aurelia App as Router':
+    'prefix': 'auapp'
+    'body': """
+        export class App {
+
+            configureRouter(router, config) {
+
+            	this.router = router;
+
+            	config.map({
+            		route: ["", "$1"],
+            		name: "$2",
+            		title: "$3",
+            		nav: ${4:true}
+            	});
+            }$0
+        }
+    """
+  'Aurelia main configuration file':
+    'prefix': 'aucf'
+    'body': """
+        export function configure(aurelia) {
+
+            aurelia.use
+            	.standardConfiguration()
+            	.developmentLogging();
+
+            aurelia.start().then(a => a.setRoot("${1:root}", ${2:document.body});
+        }
     """

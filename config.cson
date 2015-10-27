@@ -8,5 +8,8 @@
   editor:
     invisibles: {}
     tabLength: 4
+    showIndentGuide: true
+    softWrap: true
   "atom-beautify":
     _analyticsUserId: "01702a09-cfc8-4885-950c-75f7e435f076"
+  livereload: {}
