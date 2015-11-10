@@ -91,7 +91,16 @@
 # Mongoose specific
   'Mongoose model creation':
     'prefix': 'mgm'
-    'body': '\tvar mongoose = require("mongoose"),\n\tSchema = monoose.Schema;\n\nvar $1 = new Schema({\n\t\n});\n\nmodule.exports = mongoose.model("$2", $1);$3'
+    'body': """
+        var mongoose = require("mongoose"),
+            Schema = mongoose.Schema;
+
+        var $1 = new Schema({
+            $0
+        });
+
+        module.exports = mongoose.model("$2", $1);
+    """
 # AngularJS version 1 Specific Snippets
   'Angular Controller Module':
     'prefix': 'actrl'
@@ -504,6 +513,14 @@
 
         app.listen(config.port);
     """
+  'Express Module Export':
+    'prefix': 'mde'
+    'body': """
+        module.exports = function ($1) {
+            $0
+        };
+    """
+
 # Aurelia Specific Snippets
   'Aurelia App as Router':
     'prefix': 'auapp'
@@ -532,6 +549,6 @@
             	.standardConfiguration()
             	.developmentLogging();
 
-            aurelia.start().then(a => a.setRoot("${1:root}", ${2:document.body});
+            aurelia.start().then(a => a.setRoot("${1:root}", ${2:document.body}));
         }
     """
